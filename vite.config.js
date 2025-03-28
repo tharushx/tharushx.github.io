@@ -5,9 +5,15 @@ export default defineConfig({
     port: 5173,
     open: true
   },
+  base: './',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
-    sourcemap: true
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
   }
 }); 
