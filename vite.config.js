@@ -12,7 +12,7 @@ export default defineConfig({
         drop_debugger: true
       }
     },
-    cssCodeSplit: true,
+    cssCodeSplit: false,
     cssMinify: true,
     rollupOptions: {
       output: {
@@ -24,6 +24,8 @@ export default defineConfig({
           let extType = assetInfo.name.split('.')[1];
           if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
             extType = 'img';
+          } else if (/css/i.test(extType)) {
+            extType = 'css';
           }
           return `assets/${extType}/[name][extname]`;
         },

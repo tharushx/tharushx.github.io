@@ -737,4 +737,46 @@ nav a:hover::after {
     20% { opacity: 1; }
     30% { opacity: 0; }
     100% { transform: translate(200%, 200%) rotate(-45deg); opacity: 0; }
+}
+
+/* Globe Container Styles */
+#globe-container {
+    position: relative;
+    background: radial-gradient(circle at center, rgba(100, 255, 218, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#globe-container canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: grab;
+}
+
+#globe-container canvas:active {
+    cursor: grabbing;
+}
+
+/* Globe Glow Effect */
+#globe-container::before {
+    content: '';
+    position: absolute;
+    inset: -20px;
+    background: radial-gradient(circle at center, rgba(100, 255, 218, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
 } 

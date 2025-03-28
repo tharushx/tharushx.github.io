@@ -1,56 +1,26 @@
 export const projects = [
     {
-        title: "3D Portfolio Website",
-        description: "A modern portfolio website featuring Three.js animations, GSAP transitions, and responsive design. Built with HTML, Tailwind CSS, and JavaScript.",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2426&q=80",
-        technologies: ["HTML", "CSS", "JavaScript", "Three.js", "GSAP"],
+        title: "Portfolio Website",
+        description: "A modern, interactive portfolio website built with vanilla JavaScript and CSS animations. Features include an animated code editor, interactive hero section, and dynamic project cards.",
+        technologies: ["JavaScript", "CSS3", "HTML5"],
         github: "https://github.com/yourusername/portfolio",
-        demo: "https://your-portfolio.com",
-        featured: true
+        demo: "https://yourusername.github.io/portfolio",
+        image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiB2aWV3Qm94PSIwIDAgNDAwIDMwMCI+CiAgPHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIzMDAiIGZpbGw9IiMxYTFhMWEiLz4KICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIxNnB4IiBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBhbGlnbm1lbnQtYmFzZWxpbmU9Im1pZGRsZSI+CiAgICBQb3J0Zm9saW8gV2Vic2l0ZQogIDwvdGV4dD4KPC9zdmc+"
     },
     {
-        title: "AI Image Generator",
-        description: "An AI-powered image generation platform using OpenAI's DALL-E API. Users can create unique images from text descriptions.",
-        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2426&q=80",
-        technologies: ["React", "Node.js", "OpenAI API", "Tailwind CSS"],
-        github: "https://github.com/yourusername/ai-image-generator",
-        demo: "https://ai-image-generator.com",
-        featured: true
+        title: "Project 2",
+        description: "Description of project 2",
+        technologies: ["JavaScript", "React", "Node.js"],
+        github: "https://github.com/yourusername/project2",
+        demo: "https://project2-demo.com",
+        image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiB2aWV3Qm94PSIwIDAgNDAwIDMwMCI+CiAgPHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIzMDAiIGZpbGw9IiMyYjJiMmIiLz4KICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIxNnB4IiBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBhbGlnbm1lbnQtYmFzZWxpbmU9Im1pZGRsZSI+CiAgICBQcm9qZWN0IDIKICA8L3RleHQ+Cjwvc3ZnPg=="
     },
     {
-        title: "E-Commerce Platform",
-        description: "A full-stack e-commerce platform with real-time inventory management, payment processing, and admin dashboard.",
-        image: "https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2426&q=80",
-        technologies: ["Next.js", "MongoDB", "Stripe", "Redux"],
-        github: "https://github.com/yourusername/ecommerce",
-        demo: "https://ecommerce-platform.com",
-        featured: true
-    },
-    {
-        title: "Weather Dashboard",
-        description: "A weather dashboard application that displays current weather, forecasts, and interactive maps using OpenWeather API.",
-        image: "https://images.unsplash.com/photo-1592210454319-9044a2665e3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2426&q=80",
-        technologies: ["Vue.js", "OpenWeather API", "Chart.js", "Tailwind CSS"],
-        github: "https://github.com/yourusername/weather-dashboard",
-        demo: "https://weather-dashboard.com",
-        featured: false
-    },
-    {
-        title: "Task Management App",
-        description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-        image: "https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2426&q=80",
-        technologies: ["React", "Firebase", "DnD Kit", "Material UI"],
-        github: "https://github.com/yourusername/task-manager",
-        demo: "https://task-manager.com",
-        featured: false
-    },
-    {
-        title: "Music Player App",
-        description: "A modern music player application with playlist management, audio visualization, and cross-platform support.",
-        image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2426&q=80",
-        technologies: ["Electron", "React", "Howler.js", "Tailwind CSS"],
-        github: "https://github.com/yourusername/music-player",
-        demo: "https://music-player.com",
-        featured: false
+        title: "Project 3",
+        description: "Description of project 3",
+        technologies: ["Python", "Django", "PostgreSQL"],
+        github: "https://github.com/yourusername/project3",
+        demo: "https://project3-demo.com",
+        image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiB2aWV3Qm94PSIwIDAgNDAwIDMwMCI+CiAgPHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIzMDAiIGZpbGw9IiMzYzNjM2MiLz4KICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIxNnB4IiBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBhbGlnbm1lbnQtYmFzZWxpbmU9Im1pZGRsZSI+CiAgICBQcm9qZWN0IDMKICA8L3RleHQ+Cjwvc3ZnPg=="
     }
 ]; 

@@ -105,7 +105,6 @@ const typed = new Typed('#typed-text', {
 // Project Modal Functions
 const modal = document.getElementById('project-modal');
 const modalTitle = document.getElementById('modal-title');
-const modalImage = document.getElementById('modal-image');
 const modalDescription = document.getElementById('modal-description');
 const modalTechnologies = document.getElementById('modal-technologies');
 const modalGithub = document.getElementById('modal-github');
@@ -113,8 +112,6 @@ const modalDemo = document.getElementById('modal-demo');
 
 function openModal(project) {
     modalTitle.textContent = project.title;
-    modalImage.src = project.image;
-    modalImage.alt = project.title;
     modalDescription.textContent = project.description;
     modalTechnologies.innerHTML = project.technologies
         .map(tech => `<span class="px-3 py-1 bg-primary rounded-full text-sm">${tech}</span>`)
@@ -143,10 +140,37 @@ function createProjectCard(project, isFeatured = false) {
     card.className = `project-card group ${isFeatured ? 'md:col-span-2' : ''}`;
     
     card.innerHTML = `
-        <div class="relative overflow-hidden rounded-lg">
-            <img src="${project.image}" alt="${project.title}" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-tertiary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div class="absolute bottom-0 left-0 right-0 p-6">
+        <div class="relative overflow-hidden rounded-lg bg-tertiary h-64">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute inset-0 bg-gradient-to-br from-secondary/20 to-primary/20"></div>
+                <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%2364ffda\' fill-opacity=\'0.1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+            </div>
+            
+            <!-- Code Elements -->
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="absolute top-4 left-4 text-secondary/20 font-mono text-sm">
+                    <div class="mb-2">function ${project.title.toLowerCase().replace(/\s+/g, '_')}() {</div>
+                    <div class="ml-4">return {</div>
+                    <div class="ml-8">status: "success",</div>
+                    <div class="ml-8">type: "${project.technologies[0]}",</div>
+                    <div class="ml-4">};</div>
+                    <div>}</div>
+                </div>
+                <div class="absolute bottom-4 right-4 text-secondary/20 font-mono text-sm">
+                    <div>const ${project.title.toLowerCase().replace(/\s+/g, '_')} = {</div>
+                    <div class="ml-4">technologies: [</div>
+                    ${project.technologies.map(tech => `
+                        <div class="ml-8">"${tech}",</div>
+                    `).join('')}
+                    <div class="ml-4">],</div>
+                    <div>};</div>
+                </div>
+            </div>
+            
+            <!-- Content -->
+            <div class="relative h-full p-6 flex flex-col justify-between">
+                <div>
                     <h3 class="text-2xl font-bold text-secondary mb-2">${project.title}</h3>
                     <p class="text-textSecondary mb-4">${project.description}</p>
                     <div class="flex flex-wrap gap-2 mb-4">
@@ -154,14 +178,14 @@ function createProjectCard(project, isFeatured = false) {
                             <span class="px-3 py-1 bg-primary rounded-full text-sm">${tech}</span>
                         `).join('')}
                     </div>
-                    <div class="flex gap-4">
-                        <a href="${project.github}" target="_blank" class="px-4 py-2 bg-secondary text-primary font-semibold rounded-lg hover:bg-secondary/90 transition-colors">
-                            <i class="fab fa-github mr-2"></i> GitHub
-                        </a>
-                        <a href="${project.demo}" target="_blank" class="px-4 py-2 border-2 border-secondary text-secondary font-semibold rounded-lg hover:bg-secondary/10 transition-colors">
-                            <i class="fas fa-external-link-alt mr-2"></i> Live Demo
-                        </a>
-                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <a href="${project.github}" target="_blank" class="px-4 py-2 bg-secondary text-primary font-semibold rounded-lg hover:bg-secondary/90 transition-colors">
+                        <i class="fab fa-github mr-2"></i> GitHub
+                    </a>
+                    <a href="${project.demo}" target="_blank" class="px-4 py-2 border-2 border-secondary text-secondary font-semibold rounded-lg hover:bg-secondary/10 transition-colors">
+                        <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+                    </a>
                 </div>
             </div>
         </div>
@@ -206,19 +230,19 @@ class HeroBackground {
         this.camera.position.z = 5;
 
         // Create particles
-        const geometry = new THREE.SphereGeometry(0.1, 32, 32);
-        const material = new THREE.MeshBasicMaterial({ color: 0x64ffda });
+        // const geometry = new THREE.SphereGeometry(0.1, 32, 32);
+        // const material = new THREE.MeshBasicMaterial({ color: 0x64ffda });
         
-        for (let i = 0; i < 100; i++) {
-            const particle = new THREE.Mesh(geometry, material);
-            particle.position.set(
-                (Math.random() - 0.5) * 10,
-                (Math.random() - 0.5) * 10,
-                (Math.random() - 0.5) * 10
-            );
-            this.particles.push(particle);
-            this.scene.add(particle);
-        }
+        // for (let i = 0; i < 100; i++) {
+        //     const particle = new THREE.Mesh(geometry, material);
+        //     particle.position.set(
+        //         (Math.random() - 0.5) * 10,
+        //         (Math.random() - 0.5) * 10,
+        //         (Math.random() - 0.5) * 10
+        //     );
+        //     this.particles.push(particle);
+        //     this.scene.add(particle);
+        // }
 
         // Start animation
         this.animate();
@@ -364,13 +388,130 @@ const initMobileMenu = () => {
     });
 };
 
+class Globe {
+    constructor() {
+        this.container = document.getElementById('globe-container');
+        this.scene = new THREE.Scene();
+        this.camera = new THREE.PerspectiveCamera(75, this.container.clientWidth / this.container.clientHeight, 0.1, 1000);
+        this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        this.controls = null;
+        this.globe = null;
+        this.sriLanka = null;
+        this.init();
+    }
+
+    init() {
+        // Setup renderer
+        this.renderer.setSize(this.container.clientWidth, this.container.clientHeight);
+        this.renderer.setPixelRatio(window.devicePixelRatio);
+        this.container.appendChild(this.renderer.domElement);
+
+        // Setup camera
+        this.camera.position.z = 200;
+
+        // Add ambient light
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+        this.scene.add(ambientLight);
+
+        // Add point light
+        const pointLight = new THREE.PointLight(0xffffff, 1);
+        pointLight.position.set(100, 100, 100);
+        this.scene.add(pointLight);
+
+        // Create globe
+        const globeGeometry = new THREE.SphereGeometry(100, 64, 64);
+        const globeMaterial = new THREE.MeshPhongMaterial({
+            map: new THREE.TextureLoader().load('/earth-map.jpg'),
+            bumpMap: new THREE.TextureLoader().load('/earth-bump.jpg'),
+            bumpScale: 2,
+            specularMap: new THREE.TextureLoader().load('/earth-specular.jpg'),
+            specular: new THREE.Color('grey'),
+            shininess: 10
+        });
+        this.globe = new THREE.Mesh(globeGeometry, globeMaterial);
+        this.scene.add(this.globe);
+
+        // Add Sri Lanka marker
+        const sriLankaLat = 7.8731;
+        const sriLankaLon = 80.7718;
+        this.addMarker(sriLankaLat, sriLankaLon);
+
+        // Add controls
+        this.controls = new OrbitControls(this.camera, this.renderer.domElement);
+        this.controls.enableDamping = true;
+        this.controls.dampingFactor = 0.05;
+        this.controls.rotateSpeed = 0.5;
+        this.controls.enableZoom = false;
+
+        // Handle window resize
+        window.addEventListener('resize', () => this.onWindowResize());
+
+        // Start animation
+        this.animate();
+    }
+
+    addMarker(lat, lon) {
+        const radius = 102;
+        const phi = (90 - lat) * (Math.PI / 180);
+        const theta = (lon + 180) * (Math.PI / 180);
+
+        const markerGeometry = new THREE.SphereGeometry(2, 16, 16);
+        const markerMaterial = new THREE.MeshBasicMaterial({ color: 0x64ffda });
+        this.sriLanka = new THREE.Mesh(markerGeometry, markerMaterial);
+
+        this.sriLanka.position.x = -radius * Math.sin(phi) * Math.cos(theta);
+        this.sriLanka.position.y = radius * Math.cos(phi);
+        this.sriLanka.position.z = radius * Math.sin(phi) * Math.sin(theta);
+
+        this.scene.add(this.sriLanka);
+    }
+
+    onWindowResize() {
+        this.camera.aspect = this.container.clientWidth / this.container.clientHeight;
+        this.camera.updateProjectionMatrix();
+        this.renderer.setSize(this.container.clientWidth, this.container.clientHeight);
+    }
+
+    animate() {
+        requestAnimationFrame(() => this.animate());
+
+        // Rotate globe
+        this.globe.rotation.y += 0.001;
+
+        // Update marker position
+        if (this.sriLanka) {
+            this.sriLanka.rotation.y += 0.001;
+        }
+
+        // Update controls
+        this.controls.update();
+
+        // Render scene
+        this.renderer.render(this.scene, this.camera);
+    }
+}
+
 // Initialize everything when the DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    new HeroBackground();
+    // Initialize interactive dots
     new InteractiveDots();
+    
+    // Initialize hero background
+    new HeroBackground();
+    
+    // Initialize about section
     new AboutSection();
+    
+    // Initialize globe
+    new Globe();
+    
+    // Initialize animations
     initAnimations();
+    
+    // Initialize mobile menu
     initMobileMenu();
+    
+    // Render projects
     renderProjects();
 });
 
@@ -498,4 +639,26 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleActions: 'play none none reverse'
         }
     });
+});
+
+// Populate projects section
+const projectsContainer = document.querySelector('.projects-container');
+projects.forEach(project => {
+    const projectCard = document.createElement('div');
+    projectCard.className = 'project-card';
+    projectCard.innerHTML = `
+        <img src="${project.image}" alt="${project.title}" class="project-image">
+        <div class="project-content">
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+            <div class="project-technologies">
+                ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+            </div>
+            <div class="project-links">
+                <a href="${project.github}" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="${project.demo}" target="_blank" rel="noopener noreferrer">Live Demo</a>
+            </div>
+        </div>
+    `;
+    projectsContainer.appendChild(projectCard);
 }); 
