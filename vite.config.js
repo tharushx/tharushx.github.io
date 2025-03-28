@@ -5,14 +5,16 @@ export default defineConfig({
     port: 5173,
     open: true
   },
-  base: './',
+  base: '/tharushx.github.io/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: true,
     rollupOptions: {
       output: {
-        manualChunks: undefined
+        assetFileNames: 'assets/[name].[hash].[ext]',
+        chunkFileNames: 'assets/[name].[hash].js',
+        entryFileNames: 'assets/[name].[hash].js',
       }
     }
   }
