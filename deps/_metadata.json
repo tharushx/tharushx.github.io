@@ -1,0 +1,43 @@
+{
+  "hash": "a5134f1d",
+  "configHash": "42cf0b15",
+  "lockfileHash": "91be4b60",
+  "browserHash": "917bcad2",
+  "optimized": {
+    "three": {
+      "src": "../../node_modules/three/build/three.module.js",
+      "file": "three.js",
+      "fileHash": "5e2f6688",
+      "needsInterop": false
+    },
+    "gsap": {
+      "src": "../../node_modules/gsap/index.js",
+      "file": "gsap.js",
+      "fileHash": "5bbc6808",
+      "needsInterop": false
+    },
+    "typed.js": {
+      "src": "../../node_modules/typed.js/dist/typed.module.js",
+      "file": "typed__js.js",
+      "fileHash": "72a94543",
+      "needsInterop": false
+    },
+    "gsap/ScrollTrigger": {
+      "src": "../../node_modules/gsap/ScrollTrigger.js",
+      "file": "gsap_ScrollTrigger.js",
+      "fileHash": "436a7a42",
+      "needsInterop": false
+    },
+    "three/examples/jsm/controls/OrbitControls": {
+      "src": "../../node_modules/three/examples/jsm/controls/OrbitControls.js",
+      "file": "three_examples_jsm_controls_OrbitControls.js",
+      "fileHash": "61a0287d",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-PVSQIZL5": {
+      "file": "chunk-PVSQIZL5.js"
+    }
+  }
+}
