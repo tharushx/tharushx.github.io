@@ -72,6 +72,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Contact
 
 Tharusha Adithya
-- GitHub: [your-github]
-- LinkedIn: [your-linkedin]
-- Email: [your-email] 
+- GitHub: tharushx
+- LinkedIn: Tharusha Adithya
+- Email: tharushadithya10@gmail.com
