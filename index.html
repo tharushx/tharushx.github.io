@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,80 +10,87 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
-  <script type="module" crossorigin src="assets/js/index-DjFvBdeX.js"></script>
-  <link rel="modulepreload" crossorigin href="assets/js/vendor-BoibaObC.js">
-  <link rel="modulepreload" crossorigin href="assets/js/utils-yCLtHFF4.js">
-  <link rel="stylesheet" crossorigin href="assets/css/style.css">
-  
-  <!-- Mobile-specific styles -->
-  <style>
-      /* Improve tap target sizes for mobile */
-      @media (max-width: 768px) {
-          .social-icon, .tech-pill, button, .cta-primary, .cta-secondary {
-              min-height: 44px;
-              min-width: 44px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-          }
-          
-          /* Better touch feedback */
-          .active-touch {
-              transform: scale(0.95);
-              opacity: 0.8;
-              transition: transform 0.1s, opacity 0.1s;
-          }
-          
-          /* Prevent fixed position elements from jumping on mobile */
-          html, body {
-              overflow-x: hidden;
-              position: relative;
-              width: 100%;
-          }
-          
-          /* Improve scrolling smoothness */
-          * {
-              -webkit-tap-highlight-color: transparent;
-          }
-          
-          /* Add extra padding to the bottom of page for better scrolling */
-          body {
-              padding-bottom: 20px;
-          }
-          
-          /* Make scroll indicator more visible on mobile */
-          .scroll-indicator {
-              opacity: 0.7;
-          }
-          
-          /* Fix mobile project cards */
-          .project-card {
-              height: auto;
-              min-height: 320px;
-          }
-          
-          /* Code editor scrolling improvements */
-          .code-editor::-webkit-scrollbar {
-              width: 4px;
-          }
-          
-          .code-editor::-webkit-scrollbar-thumb {
-              background-color: rgba(100, 255, 218, 0.3);
-              border-radius: 4px;
-          }
-          
-          .code-editor {
-              scrollbar-width: thin;
-              scrollbar-color: rgba(100, 255, 218, 0.3) transparent;
-          }
-          
-          /* Remove the mobile globe animation since we're not showing it */
-          .mobile-globe {
-              display: none;
-          }
-      }
-  </style>
+    <script type="module" crossorigin src="assets/js/index-DjFvBdeX.js"></script>
+    <link rel="modulepreload" crossorigin href="assets/js/vendor-BoibaObC.js">
+    <link rel="modulepreload" crossorigin href="assets/js/utils-yCLtHFF4.js">
+    <link rel="stylesheet" crossorigin href="assets/css/style.css">
+
+    <!-- Mobile-specific styles -->
+    <style>
+        /* Improve tap target sizes for mobile */
+        @media (max-width: 768px) {
+
+            .social-icon,
+            .tech-pill,
+            button,
+            .cta-primary,
+            .cta-secondary {
+                min-height: 44px;
+                min-width: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            /* Better touch feedback */
+            .active-touch {
+                transform: scale(0.95);
+                opacity: 0.8;
+                transition: transform 0.1s, opacity 0.1s;
+            }
+
+            /* Prevent fixed position elements from jumping on mobile */
+            html,
+            body {
+                overflow-x: hidden;
+                position: relative;
+                width: 100%;
+            }
+
+            /* Improve scrolling smoothness */
+            * {
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            /* Add extra padding to the bottom of page for better scrolling */
+            body {
+                padding-bottom: 20px;
+            }
+
+            /* Make scroll indicator more visible on mobile */
+            .scroll-indicator {
+                opacity: 0.7;
+            }
+
+            /* Fix mobile project cards */
+            .project-card {
+                height: auto;
+                min-height: 320px;
+            }
+
+            /* Code editor scrolling improvements */
+            .code-editor::-webkit-scrollbar {
+                width: 4px;
+            }
+
+            .code-editor::-webkit-scrollbar-thumb {
+                background-color: rgba(100, 255, 218, 0.3);
+                border-radius: 4px;
+            }
+
+            .code-editor {
+                scrollbar-width: thin;
+                scrollbar-color: rgba(100, 255, 218, 0.3) transparent;
+            }
+
+            /* Remove the mobile globe animation since we're not showing it */
+            .mobile-globe {
+                display: none;
+            }
+        }
+    </style>
 </head>
+
 <body class="bg-primary text-textPrimary">
     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-primary/90 backdrop-blur-sm">
@@ -103,7 +111,8 @@
     </nav>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 bg-primary/95 backdrop-blur-md z-50 transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center">
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-primary/95 backdrop-blur-md z-50 transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center">
         <button class="absolute top-6 right-6 text-2xl" id="mobile-menu-close">
             <i class="fas fa-times"></i>
         </button>
@@ -117,10 +126,12 @@
             <a href="https://github.com/tharushx" class="text-2xl hover:text-secondary transition-colors">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="https://www.linkedin.com/in/tharusha-adithya-a7842a2b8/" class="text-2xl hover:text-secondary transition-colors">
+            <a href="https://www.linkedin.com/in/tharusha-adithya-a7842a2b8/"
+                class="text-2xl hover:text-secondary transition-colors">
                 <i class="fab fa-linkedin"></i>
             </a>
-            <a href="https://www.youtube.com/@tharushaadithya7213" class="text-2xl hover:text-secondary transition-colors">
+            <a href="https://www.youtube.com/@tharushaadithya7213"
+                class="text-2xl hover:text-secondary transition-colors">
                 <i class="fab fa-youtube"></i>
             </a>
         </div>
@@ -130,10 +141,10 @@
     <section id="home" class="min-h-screen relative overflow-hidden bg-primary">
         <!-- 3D Canvas Background -->
         <div id="hero-canvas" class="absolute inset-0 z-0"></div>
-        
+
         <!-- Animated Grid Pattern -->
         <div class="absolute inset-0 circuit-pattern opacity-20"></div>
-        
+
         <!-- Content -->
         <div class="container mx-auto px-4 max-w-screen-xl relative z-10 min-h-screen flex items-center">
             <div class="w-full flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -141,8 +152,9 @@
                 <div class="space-y-6 sm:space-y-8 order-2 lg:order-1">
                     <div class="space-glitch-wrapper relative">
                         <div class="cosmic-dust absolute inset-0"></div>
-                        <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold space-glitch-text" data-text="Tharusha Adithya">
-                            <span class="text-secondary cosmic-glow">Hi, I'm</span><br/>
+                        <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold space-glitch-text"
+                            data-text="Tharusha Adithya">
+                            <span class="text-secondary cosmic-glow">Hi, I'm</span><br />
                             <span class="relative inline-block">
                                 Tharusha Adithya
                                 <div class="cosmic-trail"></div>
@@ -150,11 +162,11 @@
                         </h1>
                         <div class="space-particles"></div>
                     </div>
-                    
+
                     <div class="typewriter-container">
                         <div id="typed-text" class="text-xl sm:text-2xl md:text-3xl text-textSecondary"></div>
                     </div>
-                    
+
                     <!-- Tech Stack Pills -->
                     <div class="flex flex-wrap gap-2 sm:gap-3">
                         <span class="tech-pill text-sm sm:text-base">JavaScript</span>
@@ -163,11 +175,12 @@
                         <span class="tech-pill text-sm sm:text-base">Three.js</span>
                         <span class="tech-pill text-sm sm:text-base">GSAP</span>
                     </div>
-                    
+
                     <!-- CTA Buttons -->
                     <div class="flex flex-wrap gap-3 sm:gap-4">
-                        <a href="#portfolio" class="cta-primary text-sm sm:text-base">
-                            <span class="relative z-10">View Portfolio</span>
+                        <a href="/public/Tharusha Adithya.pdf" download="Tharusha-CV.pdf"
+                            class="cta-primary text-sm sm:text-base">
+                            <span class="relative z-10">Download CV</span>
                             <div class="cta-glow"></div>
                         </a>
                         <a href="https://wa.me/+94711952921" target="_blank" class="cta-secondary text-sm sm:text-base">
@@ -175,40 +188,49 @@
                             <span>Let's Talk</span>
                         </a>
                     </div>
-                    
+
                     <!-- Social Links -->
                     <div class="social-links flex items-center space-x-4 sm:space-x-6">
-                        <a href="https://github.com/tharushx" class="social-icon w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center" data-tooltip="GitHub">
+                        <a href="https://github.com/tharushx"
+                            class="social-icon w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center"
+                            data-tooltip="GitHub">
                             <i class="fab fa-github text-lg sm:text-xl"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/tharusha-adithya-a7842a2b8/" class="social-icon w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center" data-tooltip="LinkedIn">
+                        <a href="https://www.linkedin.com/in/tharusha-adithya-a7842a2b8/"
+                            class="social-icon w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center"
+                            data-tooltip="LinkedIn">
                             <i class="fab fa-linkedin text-lg sm:text-xl"></i>
                         </a>
-                        <a href="https://www.youtube.com/@tharushaadithya7213" class="social-icon w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center" data-tooltip="YouTube">
+                        <a href="https://www.youtube.com/@tharushaadithya7213"
+                            class="social-icon w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center"
+                            data-tooltip="YouTube">
                             <i class="fab fa-youtube text-lg sm:text-xl"></i>
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Space-themed Interactive Element with Globe (Desktop) -->
                 <div class="relative aspect-square hidden lg:block order-1 lg:order-2">
                     <div class="absolute inset-0 space-portal-wrapper">
                         <div class="space-portal">
                             <div class="portal-ring"></div>
                             <div class="portal-content">
-                                <div id="globe-container" class="astronaut-container transform-gpu" style="transform: scale(0.65)">
+                                <div id="globe-container" class="astronaut-container transform-gpu"
+                                    style="transform: scale(0.65)">
                                     <img src="assets/img/Lanka.png" alt="Globe Image" class="w-full h-auto">
                                 </div>
                                 <div class="stars-background"></div>
                                 <div class="floating-objects">
                                     <div class="floating-code">{"developer": true}</div>
                                     <div class="floating-code">[200, "OK"]</div>
-                                    <div class="floating-code"><dev>space</dev></div>
+                                    <div class="floating-code">
+                                        <dev>space</dev>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Space Ambient Effects -->
                     <div class="space-ambient">
                         <div class="nebula-effect"></div>
@@ -216,23 +238,25 @@
                         <div class="meteor-shower"></div>
                     </div>
                 </div>
-                
+
                 <!-- Mobile Globe Element -->
-                <div class="relative mx-auto w-full max-w-[180px] aspect-square hidden lg:hidden order-1 mb-0 mt-10 mobile-globe">
+                <div
+                    class="relative mx-auto w-full max-w-[180px] aspect-square hidden lg:hidden order-1 mb-0 mt-10 mobile-globe">
                     <div class="relative w-full h-full rounded-full overflow-hidden border-2 border-secondary/30">
                         <div class="absolute inset-0 bg-tertiary/50 backdrop-blur-sm"></div>
                         <img src="assets/img/Lanka.png" alt="Globe Image" class="w-full h-full object-contain p-3">
                         <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-primary/70"></div>
                     </div>
                     <div class="absolute -inset-1 rounded-full border border-secondary/20 animate-pulse"></div>
-                    <div class="absolute -inset-3 rounded-full border border-secondary/10 animate-pulse" style="animation-delay: 0.5s"></div>
+                    <div class="absolute -inset-3 rounded-full border border-secondary/10 animate-pulse"
+                        style="animation-delay: 0.5s"></div>
                     <div class="absolute top-[45%] left-0 w-full flex justify-center">
                         <div class="text-xs text-center text-secondary/70">Sri Lanka</div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!-- Scroll Indicator -->
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 scroll-indicator">
             <div class="mouse">
@@ -252,10 +276,13 @@
             <h2 class="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center">About Me</h2>
             <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                 <div class="relative group">
-                    <div class="absolute inset-0 bg-gradient-to-r from-secondary/20 to-primary/20 rounded-lg filter blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-secondary/20 to-primary/20 rounded-lg filter blur-xl group-hover:blur-2xl transition-all duration-500">
+                    </div>
                     <div class="relative overflow-hidden rounded-lg aspect-square bg-primary p-6">
                         <div class="code-editor h-full overflow-auto md:overflow-hidden max-h-[350px] md:max-h-none">
-                            <div class="editor-header flex items-center mb-4 sticky md:static top-0 from-secondary z-10 pb-2 border-b border-secondary/10">
+                            <div
+                                class="editor-header flex items-center mb-4 sticky md:static top-0 from-secondary z-10 pb-2 border-b border-secondary/10">
                                 <div class="flex space-x-2">
                                     <div class="w-3 h-3 rounded-full bg-red-500"></div>
                                     <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
@@ -264,41 +291,54 @@
                                 <div class="ml-4 text-sm text-textSecondary">about.js</div>
                             </div>
                             <div class="code-content font-mono text-sm leading-relaxed space-y-2 animate-typing">
-                                <span class="text-purple-400">class</span> <span class="text-green-400">SoftwareEngineer</span> <span class="text-white">{</span>
-                                
+                                <span class="text-purple-400">class</span> <span
+                                    class="text-green-400">SoftwareEngineer</span> <span class="text-white">{</span>
+
                                 <div class="pl-4">
                                     <span class="text-blue-400">constructor</span>() {
-                                        <div class="pl-4">
-                                            
-                                            <span class="text-blue-400">this</span>.education = {
-                                                degree: <span class="text-orange-400">"BSc (Hons) in Software Engineering"</span>,
-                                                university: <span class="text-orange-400">"Birmingham City University (BCU), UK"</span>,
-                                                institute: <span class="text-orange-400">"Studied at Java Institute for Advanced Technology, Sri Lanka"</span>,
-                                                graduation: <span class="text-orange-400">"Expected October 2025"</span>
-                                            };
-                                            <span class="text-blue-400">this</span>.certifications = [
-                                                <span class="text-orange-400">"Business Analysis Fundamentals (Microsoft) - Coursera"</span>,
-                                                <span class="text-orange-400">"SWOT Analysis - Strategic Planning for Organizations - Alison"</span>
-                                            ];
-                                        </div>
+                                    <div class="pl-4">
+
+                                        <span class="text-blue-400">this</span>.education = {
+                                        degree: <span class="text-orange-400">"BSc (Hons) in Software
+                                            Engineering"</span>,
+                                        university: <span class="text-orange-400">"Birmingham City University (BCU),
+                                            UK"</span>,
+                                        institute: <span class="text-orange-400">"Studied at Java Institute for Advanced
+                                            Technology, Sri Lanka"</span>,
+                                        graduation: <span class="text-orange-400">"Expected October 2025"</span>
+                                        };
+                                        <span class="text-blue-400">this</span>.certifications = [
+                                        <span class="text-orange-400">"Business Analysis Fundamentals (Microsoft) -
+                                            Coursera"</span>,
+                                        <span class="text-orange-400">"SWOT Analysis - Strategic Planning for
+                                            Organizations - Alison"</span>
+                                        ];
+                                    </div>
                                     }
 
                                     <span class="text-green-400">getTechnicalSkills</span>() {
-                                        <div class="pl-4">
-                                            <span class="text-blue-400">return</span> {
-                                                languages: [<span class="text-orange-400">"Java"</span>, <span class="text-orange-400">"PHP"</span>, <span class="text-orange-400">"Python"</span>],
-                                                mobileDev: [<span class="text-orange-400">"Android (Java)"</span>, <span class="text-orange-400">"React Native"</span>],
-                                                tools: [<span class="text-orange-400">"Android Studio"</span>, <span class="text-orange-400">"NetBeans"</span>, <span class="text-orange-400">"VS Code"</span>, <span class="text-orange-400">"PyCharm"</span>, <span class="text-orange-400">"IntelliJ IDEA"</span>],
-                                                database: [<span class="text-orange-400">"MySQL"</span>, <span class="text-orange-400">"Firebase"</span>]
-                                            };
-                                        </div>
+                                    <div class="pl-4">
+                                        <span class="text-blue-400">return</span> {
+                                        languages: [<span class="text-orange-400">"Java"</span>, <span
+                                            class="text-orange-400">"PHP"</span>, <span
+                                            class="text-orange-400">"Python"</span>],
+                                        mobileDev: [<span class="text-orange-400">"Android (Java)"</span>, <span
+                                            class="text-orange-400">"React Native"</span>],
+                                        tools: [<span class="text-orange-400">"Android Studio"</span>, <span
+                                            class="text-orange-400">"NetBeans"</span>, <span class="text-orange-400">"VS
+                                            Code"</span>, <span class="text-orange-400">"PyCharm"</span>, <span
+                                            class="text-orange-400">"IntelliJ IDEA"</span>],
+                                        database: [<span class="text-orange-400">"MySQL"</span>, <span
+                                            class="text-orange-400">"Firebase"</span>]
+                                        };
+                                    </div>
                                     }
 
-                                    
-                                        <div class="pl-4">
-                                            
-                                        </div>
-                                    
+
+                                    <div class="pl-4">
+
+                                    </div>
+
                                 </div>
 
                                 <span class="text-white">}</span>
@@ -308,8 +348,20 @@
                     </div>
                 </div>
                 <div class="space-y-4 sm:space-y-6">
+
+                    <div class="relative group w-full max-w-xs mx-auto mb-6">
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-secondary/20 to-primary/20 rounded-lg filter blur-lg group-hover:blur-xl transition-all duration-500">
+                        </div>
+
+                        <img src="/public/profileIMG.jpg" alt="Tharusha Adithya"
+                            class="relative z-10 rounded-lg shadow-lg w-full mx-auto aspect-square object-cover">
+                    </div>
+
                     <p class="text-textSecondary text-base sm:text-lg">
-                        Software Engineering student at Java Institute for Advanced Technology with strong foundation in mobile and web development. Experienced in leading technical teams and organizing community events.
+                        Software Engineering student at Java Institute for Advanced Technology with strong foundation in
+                        mobile and web development. Experienced in leading technical teams and organizing community
+                        events.
                     </p>
                     <div class="space-y-3 sm:space-y-4">
                         <h3 class="text-lg sm:text-xl font-semibold text-secondary">Technical Skills</h3>
@@ -323,7 +375,7 @@
                                     <span class="px-3 py-1 bg-primary rounded-full text-sm">Python</span>
                                 </div>
                             </div>
-                            
+
                             <!-- Mobile Development -->
                             <div>
                                 <h4 class="text-lg text-secondary mb-2">Mobile Development</h4>
@@ -332,7 +384,7 @@
                                     <span class="px-3 py-1 bg-primary rounded-full text-sm">React Native</span>
                                 </div>
                             </div>
-                            
+
                             <!-- Development Tools -->
                             <div>
                                 <h4 class="text-lg text-secondary mb-2">Development Tools</h4>
@@ -360,8 +412,8 @@
                         <div class="space-y-2">
                             <p class="font-semibold">BSc (Hons) in Software Engineering</p>
                             <p class="text-textSecondary">Birmingham City University (BCU), UK</p>
-                            <p class="text-textSecondary">Studied at Java Institute for Advanced Technology, Sri Lanka</p>
-                            <p class="text-textSecondary">Expected Graduation: October 2025</p>
+                            <p class="text-textSecondary">Studied at Java Institute for Advanced Technology, Sri Lanka
+                            </p>
                         </div>
                         <!-- <div class="space-y-2">
                             <p class="font-semibold">Certifications</p>
@@ -380,12 +432,74 @@
         <div class="container mx-auto px-4 max-w-screen-xl relative z-10">
             <div class="text-center mb-8 sm:mb-16">
                 <h2 class="text-2xl sm:text-4xl font-bold mb-2 sm:mb-4">My Projects</h2>
-                <p class="text-textSecondary text-sm sm:text-base max-w-2xl mx-auto">A collection of my work showcasing my skills and experience in web development.</p>
+                <p class="text-textSecondary text-sm sm:text-base max-w-2xl mx-auto">A collection of my work showcasing
+                    my skills and experience in web development.</p>
             </div>
-            
+
             <!-- Featured Projects -->
             <div class="grid md:grid-cols-2 gap-4 sm:gap-8 mb-8 sm:mb-20">
-                <!-- Featured projects will be added dynamically -->
+                <div
+                    class="bg-tertiary rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-secondary/20 hover:-translate-y-1 group">
+                    <img src="/clipphyWeb.png" alt="Clipphy E-commerce Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">E-commerce Website</h3>
+                        <p class="text-textSecondary mb-4 text-sm">Next.js, Spring Boot, and PostgreSQL</p>
+                        <button onclick="openProjectModal(
+        'E-commerce Website (Clipphy)', 
+        'A full-stack e-commerce platform. Built using Next.js (Frontend), Spring Boot (Backend), and PostgreSQL (Database).', 
+        'https://github.com/tharushx', 
+        '#'
+    )" class="cta-secondary text-sm">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-tertiary rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-secondary/20 hover:-translate-y-1 group">
+                    <img src="/RFC.png" alt="POS System Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">POS System</h3>
+                        <p class="text-textSecondary mb-4 text-sm">Java, JavaFX, MySQL</p>
+                        <button onclick="openProjectModal(
+        'POS System',  'A Point-of-Sale (POS) system built using Java, JavaFX for the UI, and MySQL for the database.', 'https://github.com/tharushx', 
+        '#'
+    )" class="cta-secondary text-sm">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-tertiary rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-secondary/20 hover:-translate-y-1 group">
+                    <img src="/clipphy_app.png" alt="Clipphy Android App" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">Android Application</h3>
+                        <p class="text-textSecondary mb-4 text-sm">Java, Firebase</p>
+                        <button onclick="openProjectModal(
+        'Android Application (Clipphy)', 
+        'A native Android application developed for mobile users using Java and Android Studio.', 
+        'https://github.com/tharushx/Clipphy-Android-App', 
+        '#'
+    )" class="cta-secondary text-sm">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-tertiary rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-secondary/20 hover:-translate-y-1 group">
+                    <img src="/TAplayer.png" alt="TA Media Player Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">TA Media Player</h3>
+                        <p class="text-textSecondary mb-4 text-sm">JavaFX, Java</p>
+                        <button onclick="openProjectModal(
+        'TA Media Player', 'A simple media player built with Java and JavaFX.', 'https://github.com/tharushx', '#'
+    )" class="cta-secondary text-sm">
+                            View Details
+                        </button>
+                    </div>
+                </div>
             </div>
 
             <!-- Other Projects -->
@@ -400,21 +514,25 @@
                         <div class="p-6">
                             <div class="flex justify-between items-start mb-6">
                                 <h3 class="text-2xl font-bold text-secondary" id="modal-title"></h3>
-                                <button class="text-textSecondary hover:text-secondary transition-colors" onclick="closeModal()">
+                                <button class="text-textSecondary hover:text-secondary transition-colors"
+                                    onclick="closeModal()">
                                     <i class="fas fa-times text-2xl"></i>
                                 </button>
                             </div>
                             <div class="space-y-6">
-                                <div class="relative h-64 rounded-lg overflow-hidden bg-primary flex items-center justify-center">
+                                <div
+                                    class="relative h-64 rounded-lg overflow-hidden bg-primary flex items-center justify-center">
                                     <i class="fas fa-code text-6xl text-secondary opacity-20"></i>
                                 </div>
                                 <p id="modal-description" class="text-textSecondary"></p>
                                 <div class="flex flex-wrap gap-2" id="modal-technologies"></div>
                                 <div class="flex gap-4">
-                                    <a id="modal-github" href="#" target="_blank" class="px-6 py-3 bg-secondary text-primary font-semibold rounded-lg hover:bg-secondary/90 transition-colors">
+                                    <a id="modal-github" href="#" target="_blank"
+                                        class="px-6 py-3 bg-secondary text-primary font-semibold rounded-lg hover:bg-secondary/90 transition-colors">
                                         <i class="fab fa-github mr-2"></i> GitHub
                                     </a>
-                                    <a id="modal-demo" href="#" target="_blank" class="px-6 py-3 border-2 border-secondary text-secondary font-semibold rounded-lg hover:bg-secondary/10 transition-colors">
+                                    <a id="modal-demo" href="#" target="_blank"
+                                        class="px-6 py-3 border-2 border-secondary text-secondary font-semibold rounded-lg hover:bg-secondary/10 transition-colors">
                                         <i class="fas fa-external-link-alt mr-2"></i> Live Demo
                                     </a>
                                 </div>
@@ -431,22 +549,25 @@
         <div class="container mx-auto px-4 max-w-screen-xl">
             <div class="text-center mb-8 sm:mb-16">
                 <h2 class="text-2xl sm:text-4xl font-bold mb-2 sm:mb-4">Get In Touch</h2>
-                <p class="text-textSecondary text-sm sm:text-base max-w-2xl mx-auto">Have a project in mind or want to collaborate? I'm always open to discussing new opportunities.</p>
+                <p class="text-textSecondary text-sm sm:text-base max-w-2xl mx-auto">Have a project in mind or want to
+                    collaborate? I'm always open to discussing new opportunities.</p>
             </div>
             <div class="max-w-2xl mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
-                    <a href="https://wa.me/+94711952921" target="_blank" 
+                    <a href="https://wa.me/+94711952921" target="_blank"
                         class="flex flex-col items-center p-4 sm:p-8 bg-primary rounded-lg hover:bg-primary/80 transition-colors group">
                         <i class="fab fa-whatsapp text-4xl sm:text-6xl text-secondary mb-3 sm:mb-4"></i>
                         <h3 class="text-lg sm:text-xl font-semibold mb-1 sm:mb-2">WhatsApp Business</h3>
-                        <p class="text-textSecondary text-center text-sm sm:text-base mb-2 sm:mb-4">Quick response for business inquiries</p>
+                        <p class="text-textSecondary text-center text-sm sm:text-base mb-2 sm:mb-4">Quick response for
+                            business inquiries</p>
                         <span class="text-secondary text-sm sm:text-base group-hover:underline">Message me</span>
                     </a>
-                    <a href="mailto:your.tharushadithya10@gmail.com" 
+                    <a href="mailto:your.tharushadithya10@gmail.com"
                         class="flex flex-col items-center p-4 sm:p-8 bg-primary rounded-lg hover:bg-primary/80 transition-colors group">
                         <i class="fas fa-envelope text-4xl sm:text-6xl text-secondary mb-3 sm:mb-4"></i>
                         <h3 class="text-lg sm:text-xl font-semibold mb-1 sm:mb-2">Email</h3>
-                        <p class="text-textSecondary text-center text-sm sm:text-base mb-2 sm:mb-4">For formal business communications</p>
+                        <p class="text-textSecondary text-center text-sm sm:text-base mb-2 sm:mb-4">For formal business
+                            communications</p>
                         <span class="text-secondary text-sm sm:text-base group-hover:underline">Send email</span>
                     </a>
                 </div>
@@ -456,10 +577,12 @@
                         <a href="https://github.com/tharushx" class="text-3xl hover:text-secondary transition-colors">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/tharusha-adithya-a7842a2b8/" class="text-3xl hover:text-secondary transition-colors">
+                        <a href="https://www.linkedin.com/in/tharusha-adithya-a7842a2b8/"
+                            class="text-3xl hover:text-secondary transition-colors">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="https://www.youtube.com/@tharushaadithya7213" class="text-3xl hover:text-secondary transition-colors">
+                        <a href="https://www.youtube.com/@tharushaadithya7213"
+                            class="text-3xl hover:text-secondary transition-colors">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
@@ -471,12 +594,14 @@
     <!-- Footer -->
     <footer class="py-6 sm:py-8 text-center text-textSecondary">
         <div class="container mx-auto px-4 max-w-screen-xl">
-            <p class="mb-3 sm:mb-4 text-sm sm:text-base">Built with <span class="text-secondary">❤️</span> by Tharusha Adithya</p>
+            <p class="mb-3 sm:mb-4 text-sm sm:text-base">Built with <span class="text-secondary">❤️</span> by Tharusha
+                Adithya</p>
             <div class="flex justify-center space-x-4 sm:space-x-6">
                 <a href="https://github.com/tharushx" class="hover:text-secondary transition-colors">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/tharusha-adithya-a7842a2b8/" class="hover:text-secondary transition-colors">
+                <a href="https://www.linkedin.com/in/tharusha-adithya-a7842a2b8/"
+                    class="hover:text-secondary transition-colors">
                     <i class="fab fa-linkedin"></i>
                 </a>
                 <a href="https://www.youtube.com/@tharushaadithya7213" class="hover:text-secondary transition-colors">
@@ -488,38 +613,38 @@
 
     <script>
         // Mobile menu functionality
-        document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+        document.getElementById('mobile-menu-toggle').addEventListener('click', function () {
             document.getElementById('mobile-menu').classList.remove('translate-x-full');
         });
-        
-        document.getElementById('mobile-menu-close').addEventListener('click', function() {
+
+        document.getElementById('mobile-menu-close').addEventListener('click', function () {
             document.getElementById('mobile-menu').classList.add('translate-x-full');
         });
-        
+
         // Close mobile menu when clicking on links
         document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function () {
                 document.getElementById('mobile-menu').classList.add('translate-x-full');
             });
         });
-        
+
         // Improve touch behavior on mobile
         document.querySelectorAll('a, button').forEach(element => {
-            element.addEventListener('touchstart', function() {
+            element.addEventListener('touchstart', function () {
                 this.classList.add('active-touch');
             });
-            element.addEventListener('touchend', function() {
+            element.addEventListener('touchend', function () {
                 this.classList.remove('active-touch');
             });
         });
-        
+
         // Add smooth scrolling for all anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
+
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
@@ -529,6 +654,29 @@
                 }
             });
         });
+
+        function openProjectModal(title, description, githubLink, demoLink) {
+            const modal = document.getElementById('project-modal');
+            if (modal) {
+                // Set the content
+                document.getElementById('modal-title').textContent = title;
+                document.getElementById('modal-description').textContent = description;
+                document.getElementById('modal-github').href = githubLink;
+                document.getElementById('modal-demo').href = demoLink;
+
+                // Show the modal
+                modal.classList.remove('hidden');
+            }
+        }
+
+        // This function CLOSES the modal
+        function closeModal() {
+            const modal = document.getElementById('project-modal');
+            if (modal) {
+                modal.classList.add('hidden');
+            }
+        }
     </script>
 </body>
-</html> 
+
+</html>

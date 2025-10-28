@@ -110,6 +110,7 @@ const modalTechnologies = document.getElementById('modal-technologies');
 const modalGithub = document.getElementById('modal-github');
 const modalDemo = document.getElementById('modal-demo');
 
+
 function openModal(project) {
     modalTitle.textContent = project.title;
     modalDescription.textContent = project.description;
@@ -589,6 +590,8 @@ const initTyped = () => {
     new Typed('#typed-text', options);
 };
 
+
+
 // Initialize Particles
 const initParticles = () => {
     const container = document.getElementById('particles-container');
@@ -642,23 +645,74 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Populate projects section
-const projectsContainer = document.querySelector('.projects-container');
-projects.forEach(project => {
+// const projectsContainer = document.querySelector('.projects-container');
+// projects.forEach(project => {
+//     const projectCard = document.createElement('div');
+//     projectCard.className = 'project-card';
+//     projectCard.innerHTML = `
+//         <img src="${project.image}" alt="${project.title}" class="project-image">
+//         <div class="project-content">
+//             <h3>${project.title}</h3>
+//             <p>${project.description}</p>
+//             <div class="project-technologies">
+//                 ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+//             </div>
+//             <div class="project-links">
+//                 <a href="${project.github}" target="_blank" rel="noopener noreferrer">GitHub</a>
+//                 <a href="${project.demo}" target="_blank" rel="noopener noreferrer">Live Demo</a>
+//             </div>
+//         </div>
+//     `;
+//     projectsContainer.appendChild(projectCard);
+// }); 
+
+// --- Add this code to show projects ---
+
+const projectsContainer = document.querySelector('#projects-container');
+
+if (projectsContainer) {
+  projects.forEach(project => {
+    // 1. Create the main card element
     const projectCard = document.createElement('div');
-    projectCard.className = 'project-card';
-    projectCard.innerHTML = `
-        <img src="${project.image}" alt="${project.title}" class="project-image">
-        <div class="project-content">
-            <h3>${project.title}</h3>
-            <p>${project.description}</p>
-            <div class="project-technologies">
-                ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
-            </div>
-            <div class="project-links">
-                <a href="${project.github}" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="${project.demo}" target="_blank" rel="noopener noreferrer">Live Demo</a>
-            </div>
-        </div>
-    `;
+    projectCard.className = 'bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105';
+
+    // 2. Create the image
+    const projectImage = document.createElement('img');
+    projectImage.src = project.image;
+    projectImage.alt = project.title;
+    projectImage.className = 'w-full h-48 object-cover';
+
+    // 3. Create the content body
+    const cardBody = document.createElement('div');
+    cardBody.className = 'p-6';
+
+    // 4. Create the title
+    const cardTitle = document.createElement('h3');
+    cardTitle.className = 'text-2xl font-bold mb-2';
+    cardTitle.textContent = project.title;
+
+    // 5. Create the description
+    const cardDescription = document.createElement('p');
+    cardDescription.className = 'text-gray-400 mb-4';
+    cardDescription.textContent = project.description;
+
+    // 6. Create the link/button
+    const cardLink = document.createElement('a');
+    cardLink.href = project.link;
+    cardLink.target = '_blank';
+    cardLink.rel = 'noopener noreferrer';
+    cardLink.className = 'inline-block bg-blue-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition-colors duration-300';
+    cardLink.textContent = 'View Project';
+
+    // 7. Assemble the card
+    cardBody.appendChild(cardTitle);
+    cardBody.appendChild(cardDescription);
+    cardBody.appendChild(cardLink);
+    
+    projectCard.appendChild(projectImage);
+    projectCard.appendChild(cardBody);
+
+    // 8. Add the card to the page
     projectsContainer.appendChild(projectCard);
-}); 
+  });
+}
