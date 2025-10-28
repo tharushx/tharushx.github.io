@@ -178,7 +178,7 @@
 
                     <!-- CTA Buttons -->
                     <div class="flex flex-wrap gap-3 sm:gap-4">
-                        <a href="/public/Tharusha Adithya.pdf" download="Tharusha-CV.pdf"
+                        <a href="/public/Tharusha Adithya.pdf" download="Tharusha Adithya-CV.pdf"
                             class="cta-primary text-sm sm:text-base">
                             <span class="relative z-10">Download CV</span>
                             <div class="cta-glow"></div>
@@ -320,16 +320,19 @@
                                     <div class="pl-4">
                                         <span class="text-blue-400">return</span> {
                                         languages: [<span class="text-orange-400">"Java"</span>, <span
-                                            class="text-orange-400">"PHP"</span>, <span
-                                            class="text-orange-400">"Python"</span>],
+                                            class="text-orange-400">"PHP"</span>,
                                         mobileDev: [<span class="text-orange-400">"Android (Java)"</span>, <span
                                             class="text-orange-400">"React Native"</span>],
+                                        webFrameworks: [<span class="text-orange-400">"Next.js"</span>, <span
+                                            class="text-orange-400">"React"</span>,<span
+                                            class="text-orange-400">"Spring Boot"</span> ],
                                         tools: [<span class="text-orange-400">"Android Studio"</span>, <span
                                             class="text-orange-400">"NetBeans"</span>, <span class="text-orange-400">"VS
                                             Code"</span>, <span class="text-orange-400">"PyCharm"</span>, <span
                                             class="text-orange-400">"IntelliJ IDEA"</span>],
                                         database: [<span class="text-orange-400">"MySQL"</span>, <span
-                                            class="text-orange-400">"Firebase"</span>]
+                                            class="text-orange-400">"Firebase"</span>,<span
+                                            class="text-orange-400">"PostgreSQL "</span>]
                                         };
                                     </div>
                                     }
@@ -372,7 +375,6 @@
                                 <div class="flex flex-wrap gap-2">
                                     <span class="px-3 py-1 bg-primary rounded-full text-sm">Java</span>
                                     <span class="px-3 py-1 bg-primary rounded-full text-sm">PHP</span>
-                                    <span class="px-3 py-1 bg-primary rounded-full text-sm">Python</span>
                                 </div>
                             </div>
 
@@ -384,6 +386,16 @@
                                     <span class="px-3 py-1 bg-primary rounded-full text-sm">React Native</span>
                                 </div>
                             </div>
+
+                            <div>
+                                <h4 class="text-lg text-secondary mb-2">Web Frameworks</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-primary rounded-full text-sm">Next.js</span>
+                                    <span class="px-3 py-1 bg-primary rounded-full text-sm">React</span>
+                                    <span class="px-3 py-1 bg-primary rounded-full text-sm">Sprin Boot</span>
+                                </div>
+                            </div>
+
 
                             <!-- Development Tools -->
                             <div>
@@ -403,6 +415,7 @@
                                 <div class="flex flex-wrap gap-2">
                                     <span class="px-3 py-1 bg-primary rounded-full text-sm">MySQL</span>
                                     <span class="px-3 py-1 bg-primary rounded-full text-sm">Firebase</span>
+                                    <span class="px-3 py-1 bg-primary rounded-full text-sm">PostgreSQL</span>
                                 </div>
                             </div>
                         </div>
@@ -476,14 +489,10 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-secondary mb-2">Android Application</h3>
                         <p class="text-textSecondary mb-4 text-sm">Java, Firebase</p>
-                        <button onclick="openProjectModal(
-        'Android Application (Clipphy)', 
-        'A native Android application developed for mobile users using Java and Android Studio.', 
-        'https://github.com/tharushx/Clipphy-Android-App', 
-        '#'
-    )" class="cta-secondary text-sm">
+                        <a href="https://github.com/tharushx/Clipphy-Android-App" target="_blank"
+                            rel="noopener noreferrer" class="cta-secondary text-sm">
                             View Details
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -562,7 +571,7 @@
                             business inquiries</p>
                         <span class="text-secondary text-sm sm:text-base group-hover:underline">Message me</span>
                     </a>
-                    <a href="mailto:your.tharushadithya10@gmail.com"
+                    <a href="mailto:tharushadithya10@gmail.com"
                         class="flex flex-col items-center p-4 sm:p-8 bg-primary rounded-lg hover:bg-primary/80 transition-colors group">
                         <i class="fas fa-envelope text-4xl sm:text-6xl text-secondary mb-3 sm:mb-4"></i>
                         <h3 class="text-lg sm:text-xl font-semibold mb-1 sm:mb-2">Email</h3>
@@ -655,13 +664,20 @@
             });
         });
 
+        // --- ADD THIS CODE FOR MODAL ---
+
+        // This function OPENS the modal and SETS the links
         function openProjectModal(title, description, githubLink, demoLink) {
             const modal = document.getElementById('project-modal');
             if (modal) {
                 // Set the content
                 document.getElementById('modal-title').textContent = title;
                 document.getElementById('modal-description').textContent = description;
+
+                // This line sets the GitHub link
                 document.getElementById('modal-github').href = githubLink;
+
+                // This line sets the Demo link
                 document.getElementById('modal-demo').href = demoLink;
 
                 // Show the modal
